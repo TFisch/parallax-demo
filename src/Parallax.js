@@ -8,13 +8,16 @@ const bottomFade = `linear-gradient(180deg, rgba(9,44,121,1) 0%, rgba(9,44,121,1
 class ParallaxDemo extends Component {
   render() {
     return (
-      <Parallax ref={(ref) => (this.parallax = ref)} pages={2}>
+      <Parallax
+        ref={(ref) => (this.parallax = ref)}
+        pages={2}
+        style={{ background: topFade }}
+      >
         <ParallaxLayer offset={0} speed={0}>
           <div
             style={{
               height: '100%',
-              width: '100%',
-              background: topFade
+              width: '100%'
             }}
           ></div>
         </ParallaxLayer>
@@ -23,27 +26,28 @@ class ParallaxDemo extends Component {
             style={{
               height: '100%',
               width: '100%'
-              // background: bottomFade
             }}
           ></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
+        <ParallaxLayer offset={1} speed={2} style={{ opacity: 0.8 }}>
           <img
             src={process.env.PUBLIC_URL + 'circle.svg'}
             style={{
               zIndex: -1,
               display: 'block',
               width: '100%',
-              marginLeft: '420px',
               width: '200px',
-              height: '200px'
+              height: '200px',
+              position: 'absolute',
+              top: '300px',
+              left: '300px'
             }}
           />
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}
-          speed={0.1}
-          style={{ opacity: 0.9, width: '100%' }}
+          speed={0.5}
+          style={{ opacity: 0.9, width: '100%', marginTop: '300px' }}
         >
           <img
             src={process.env.PUBLIC_URL + 'buildings_sill.svg'}
@@ -53,7 +57,12 @@ class ParallaxDemo extends Component {
         <ParallaxLayer
           offset={1}
           speed={-0}
-          style={{ opacity: 1, width: '100%' }}
+          style={{
+            opacity: 1,
+            width: '100%',
+            marginTop: '110px',
+            marginLeft: '100px'
+          }}
         >
           <img
             src={process.env.PUBLIC_URL + 'city_sill.svg'}
