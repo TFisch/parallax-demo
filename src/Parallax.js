@@ -16,6 +16,34 @@ class ParallaxDemo extends Component {
         <ParallaxLayer offset={0} speed={0}>
           <StarsBackground />
         </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.3}>
+          <img
+            src={process.env.PUBLIC_URL + 'cloud_one.png'}
+            style={{
+              zIndex: -1,
+              display: 'block',
+              width: '600px',
+              height: '200px',
+              position: 'absolute',
+              top: '340px',
+              left: '800px'
+            }}
+          />
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0}>
+          <img
+            src={process.env.PUBLIC_URL + 'cloud_two.png'}
+            style={{
+              zIndex: -1,
+              display: 'block',
+              width: '600px',
+              height: '200px',
+              position: 'absolute',
+              top: '270px',
+              left: '10px'
+            }}
+          />
+        </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
           <div
             style={{
