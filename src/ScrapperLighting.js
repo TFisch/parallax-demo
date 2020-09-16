@@ -1,7 +1,7 @@
 import React from 'react';
 
 const smallLightStyles = {
-  background: 'red',
+  background: '#FFC51C',
   height: '10px',
   width: '4px',
   borderColor: '#FFC51C',
@@ -9,10 +9,15 @@ const smallLightStyles = {
   borderWidth: '2px',
   position: 'absolute',
   zIndex: '9999',
-  top: `${(props) => (props.top ? props.top : '210px')}`,
   right: '740px',
-  opacity: '1'
+  opacity: '.8'
 };
+
+const lightOne = { ...smallLightStyles, top: '190px' };
+const lightTwo = { ...smallLightStyles, top: '210px' };
+const lightThree = { ...smallLightStyles, top: '230px' };
+const lightFour = { ...smallLightStyles, top: '250px' };
+const lightFive = { ...smallLightStyles, top: '270px' };
 
 export default function ScrapperLighting(props) {
   return (
@@ -35,7 +40,11 @@ export default function ScrapperLighting(props) {
           opacity: '1'
         }}
       ></div>
-      <div style={smallLightStyles} top="210px"></div>
+      <div style={lightOne}></div>
+      <div style={lightTwo}></div>
+      <div style={lightThree}></div>
+      <div style={lightFour}></div>
+      <div style={lightFive}></div>
     </React.Fragment>
   );
 }

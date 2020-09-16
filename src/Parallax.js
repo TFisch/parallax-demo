@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/addons';
 import StarsBackground from './StarsBackground';
 import ScrapperLighting from './ScrapperLighting';
+import HospitalLighting from './HospitalLighting';
+import StreetLight from './StreetLight';
 const topFade = `linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,25,121,1) 100%)`;
 
 class ParallaxDemo extends Component {
@@ -18,6 +20,7 @@ class ParallaxDemo extends Component {
         <ParallaxLayer offset={0} speed={0.3}>
           <img
             src={process.env.PUBLIC_URL + 'cloud_one.png'}
+            alt="large cloud"
             style={{
               zIndex: -1,
               display: 'block',
@@ -32,6 +35,7 @@ class ParallaxDemo extends Component {
         <ParallaxLayer offset={0} speed={0}>
           <img
             src={process.env.PUBLIC_URL + 'cloud_two.png'}
+            alt="large cloud"
             style={{
               zIndex: -1,
               display: 'block',
@@ -46,6 +50,7 @@ class ParallaxDemo extends Component {
         <ParallaxLayer offset={1} speed={0.5} style={{ opacity: 0.8 }}>
           <img
             src={process.env.PUBLIC_URL + 'bat_one.png'}
+            alt="bat flying upwards"
             style={{
               zIndex: -1,
               display: 'block',
@@ -195,7 +200,8 @@ class ParallaxDemo extends Component {
             opacity: 1,
             width: '100%',
             marginTop: '110px',
-            marginLeft: '100px'
+            marginLeft: '100px',
+            position: 'relative'
           }}
         >
           <img
@@ -207,6 +213,8 @@ class ParallaxDemo extends Component {
           />
 
           <ScrapperLighting />
+          <HospitalLighting />
+          <StreetLight />
         </ParallaxLayer>
       </Parallax>
     );
