@@ -5,7 +5,7 @@ import * as styles from './styles';
 const CitySection = () => {
   return (
     <div>
-      <ParallaxLayer offset={2} speed={0.75} style={{ opacity: 0.8 }}>
+      <ParallaxLayer offset={2} speed={0.5} style={{ opacity: 0.8 }}>
         <img
           src={process.env.PUBLIC_URL + 'circle.svg'}
           style={styles.moonStyles}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ParallaxLayer } from 'react-spring/addons';
 import StarsBackground from '../StarsBackground';
+
 import * as styles from './styles';
 
 const CloudsSection = () => {
@@ -20,6 +21,13 @@ const CloudsSection = () => {
           src={process.env.PUBLIC_URL + 'cloud_one.png'}
           alt="large cloud"
           style={styles.cloudOneStyles}
+        />
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.1}>
+        <img
+          src={process.env.PUBLIC_URL + 'cloud_five.png'}
+          alt="large cloud"
+          style={styles.cloudFiveStyles}
         />
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0}>

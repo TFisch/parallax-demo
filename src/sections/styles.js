@@ -5,7 +5,7 @@ export const moonStyles = {
   width: '200px',
   height: '200px',
   position: 'absolute',
-  bottom: '600px',
+  bottom: '500px',
   left: '300px'
 };
 
@@ -113,7 +113,7 @@ export const cloudSixStyles = {
   height: '300px',
   position: 'absolute',
   top: '100px',
-  right: '300px'
+  right: '480px'
 };
 
 export const cloudOneStyles = {
@@ -126,6 +126,15 @@ export const cloudOneStyles = {
 };
 
 export const cloudTwoStyles = {
+  display: 'block',
+  width: '600px',
+  height: '200px',
+  position: 'absolute',
+  top: '400px',
+  left: '10px'
+};
+
+export const cloudFiveStyles = {
   display: 'block',
   width: '600px',
   height: '200px',
